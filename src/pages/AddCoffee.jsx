@@ -74,7 +74,7 @@ const AddCoffee = () => {
 
     console.log(newCoffee);
 
-    fetch(`http://localhost:5000/coffee`, {
+    fetch(`https://coffee-store-server-neon-five.vercel.app/coffee`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -16,7 +16,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:5000/coffee"),
+        loader: () => fetch("https://coffee-store-server-neon-five.vercel.app/coffee"),
       },
       {
         path: "signIn",
@@ -34,14 +34,15 @@ const router = createBrowserRouter([
       {
         path: "/update-coffee/:id",
         element: <UpdateCoffee />,
-        loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`),
+        loader: ({ params }) =>
+          fetch(`https://coffee-store-server-neon-five.vercel.app/coffee/${params.id}`),
 
         // children: [],
       },
       {
         path: "users",
         element: <Users />,
-        loader: () => fetch(`http://localhost:5000/users`),
+        loader: () => fetch(`https://coffee-store-server-neon-five.vercel.app/users`),
       },
     ],
   },

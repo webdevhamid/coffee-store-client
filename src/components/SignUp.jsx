@@ -31,7 +31,7 @@ const SignUp = () => {
         const newUser = { name, email, createdAt };
 
         // Save the new user info to the MongoDB database
-        fetch(`http://localhost:5000/users`, {
+        fetch(`https://coffee-store-server-neon-five.vercel.app/users`, {
           method: "POST",
           headers: { "content-type": "application/json" },
           body: JSON.stringify(newUser),
